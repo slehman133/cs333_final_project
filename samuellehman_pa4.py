@@ -182,7 +182,7 @@ def select_from_tuple(data: str)->list:
     handles getting data from tables
     """
     # gets tableName from data
-    tableName = data.split()[data.split().index("from")+1].capitalize()
+    tableName = data.split()[data.split().index("from")+1]
     fromTables = get_join_tables(data.split("\n"))
     if (data.__contains__("*") and len(fromTables) > 1):
         tables = []
@@ -288,7 +288,7 @@ def update_tuple(data: str) -> None:
     """
     updates a tables data
     """
-    tableName = data.split()[0].capitalize()
+    tableName = data.split()[0]
     if (transacting == True):
         if (check_for_lock(tableName) == True):
             print(f"ERROR: Table {tableName} is locked.")
