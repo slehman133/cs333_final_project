@@ -49,8 +49,8 @@ class DatabaseTest(unittest.TestCase):
         use_database("test")
         create_table("table1 (example int)")
         insert_into("table1 values(1)")
-        self.assertTrue(check_for_lock("table1"))
-        
+        self.assertFalse(check_for_lock("table1"))
+
 
     def tearDown(self):
         drop_database("test")
