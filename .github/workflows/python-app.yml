@@ -39,3 +39,7 @@ jobs:
         pip install coverage
         coverage run -m unittest tests/*_test.py --verbose
         coverage report
+        
+    - name: Build and push Docker images
+      uses: docker/build-push-action@v5.3.0
+            
