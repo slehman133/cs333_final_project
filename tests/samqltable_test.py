@@ -1,5 +1,5 @@
 import unittest
-from samuellehman_pa4 import *
+from samqlite import *
 from SamQLTable import *
 
 
