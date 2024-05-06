@@ -7,4 +7,4 @@ WORKDIR "/app"
 
 ADD ./ /app
 
-ENTRYPOINT [ "python", "samuellehman_pa4.py" ]
+ENTRYPOINT [ "python", "samqlite.py" ]
