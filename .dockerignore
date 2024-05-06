@@ -1,0 +1,5 @@
+.github
+__pycache__
+tests
+.coverage
+create_and_run.sh
