@@ -35,6 +35,7 @@ jobs:
         coverage report
   # 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
   build_and_publish:
+    permissions: write-all
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
