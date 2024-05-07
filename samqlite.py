@@ -20,6 +20,7 @@ def main() -> None:
     """
     entry point of the program
     """
+    # print("HELLLOOOOOO")
     if (len(sys.argv) > 1):
         handle_prog_args()
 
