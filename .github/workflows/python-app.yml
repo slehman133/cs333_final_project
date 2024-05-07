@@ -40,6 +40,13 @@ jobs:
         coverage run -m unittest tests/*_test.py --verbose
         coverage report
         
-    - name: Build and push Docker images
-      uses: docker/build-push-action@v5.3.0
+    # - name: Build and push Docker images
+    #   uses: docker/build-push-action@v5.3.0
+
+    - name: Docker Image CI/CD
+        run: |
+          docker login -u slehman133 -p ${{ GH_PAT }} ghcr.io
+          docker build . -t ghcr.io/slehman133/samqlite:latest
+          docker push ghcr.io/slehman133/samqlite:latest
+
             
