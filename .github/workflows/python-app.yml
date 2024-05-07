@@ -33,7 +33,6 @@ jobs:
         pip install coverage
         coverage run -m unittest tests/*_test.py --verbose
         coverage report
-  # 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
   build_and_publish:
     permissions: write-all
     runs-on: ubuntu-latest
@@ -41,6 +40,6 @@ jobs:
     - uses: actions/checkout@v3
       - name: Docker Image CI/CD
         run: |
-          docker login --username slehman133 --password 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 ghcr.io
+          docker login --username slehman133 --password ${{ secrets.GH_PAT }} ghcr.io
           docker build . -t ghcr.io/slehman133/samqlite:latest
           docker push ghcr.io/slehman133/samqlite:latest
