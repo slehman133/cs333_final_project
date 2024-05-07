@@ -43,9 +43,9 @@ jobs:
   build_and_publish:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-        - name: Docker Image CI/CD
-          run: |
-            docker login --username slehman133 --password ${{ secrets.GH_PAT }} ghcr.io
-            docker build . -t ghcr.io/slehman133/samqlite:latest
-            docker push ghcr.io/slehman133/samqlite:latest
+    - uses: actions/checkout@v3
+      - name: Docker Image CI/CD
+        run: |
+          docker login --username slehman133 --password ${{ secrets.GH_PAT }} ghcr.io
+          docker build . -t ghcr.io/slehman133/samqlite:latest
+          docker push ghcr.io/slehman133/samqlite:latest
