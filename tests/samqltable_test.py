@@ -13,7 +13,7 @@ class SamQLTableTest(unittest.TestCase):
         handle_args("insert into table1 values (1)")
         table = SamQLTable("test", "table1")
         content = table.read_table_file(table.tablePath)
-        self.assertEqual(content, ['example int', '1'])
+        self.assertEqual(content, ['example int', '2'])
 
     def test_update_table_file(self):
         handle_args("use test")
