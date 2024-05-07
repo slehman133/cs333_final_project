@@ -10,7 +10,7 @@ class HandleArgsTest(unittest.TestCase):
     def test_handle_args_create_table(self):
         use_database("test")
         handle_args("create table table1 (example int)")
-        self.assertTrue(os.path.exists("test/table2"))
+        self.assertTrue(os.path.exists("test/table1"))
 
     def test_handle_args_drop_table(self):
         use_database("test")
