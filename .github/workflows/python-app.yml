@@ -37,7 +37,7 @@ jobs:
     permissions: write-all
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
+      - uses: actions/checkout@v3
       - name: Docker Image CI/CD
         run: |
           docker login --username slehman133 --password ${{ secrets.GH_PAT }} ghcr.io
